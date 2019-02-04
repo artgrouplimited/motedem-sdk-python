@@ -1,1 +1,1 @@
-__all__ = ['motedem']
+__all__ = ['SDK']
