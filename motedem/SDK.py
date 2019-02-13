@@ -62,7 +62,7 @@ class Device:
         buffer = bytearray()
         buffer += b'\x45\x34\x25' + bytes([5 + length]) + b'\x81'
         buffer += sequence
-        buffer += bytes([sum(buffer)])
+        buffer += bytes([sum(buffer) & 0xff])
         packet_count = int((len(buffer) + 19) / 20)
         control_sequence = bytes([packet_count])
         control_value = __reference__()
